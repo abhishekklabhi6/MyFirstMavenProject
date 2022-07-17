@@ -25,6 +25,7 @@ public class FaceBookTest {
 		rs=new ReusableFunction();
 		driver.get("https://www.facebook.com");
 		driver.manage().window().maximize();
+		
 	}
 	@Test
 	public void runfb()
@@ -37,12 +38,11 @@ public class FaceBookTest {
 			rs.setValue(username, "9686928900");
 			rs.setValue(pass, "9482436927");
 			rs.click(login);
-			TimeUnit.SECONDS.sleep(10);
 			String actualTitle=driver.getCurrentUrl();
 			String expectedurl="https://www.facebook.com/";
 			Assert.assertEquals(expectedurl, actualTitle,"Assertion fails");
 		}
-		catch(InterruptedException e)
+		catch(Exception e)
 		{
 			e.printStackTrace();
 		}
