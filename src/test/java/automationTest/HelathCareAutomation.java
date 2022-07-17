@@ -15,7 +15,7 @@ import eeusableFunction.ReusableFunction;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class HelathCareAutomation {
-	@Test()
+	@Test(invocationCount=3)
 	public void chromeRun()
 	{
 		try
