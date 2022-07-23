@@ -1,33 +1,29 @@
 package automationTest;
 
-import java.io.File;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import eeusableFunction.ReusableFunction;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class HelathCareAutomation {
+public class HelathCareAutomationInEdge {
 	@Test()
 	public void chromeRun()
 	{
 		try
 		{
 		ReusableFunction rs=new ReusableFunction();
-	WebDriverManager.chromedriver().setup();
-	WebDriver driver=new ChromeDriver();
+	WebDriverManager.edgedriver().setup();
+	WebDriver driver=new EdgeDriver();
 	driver.manage().window().maximize();
 	driver.get("https://katalon-demo-cura.herokuapp.com/");
 	WebElement makappointlink=driver.findElement(By.xpath("//a[text()='Make Appointment']"));
@@ -61,24 +57,15 @@ public class HelathCareAutomation {
 	}
 	WebElement comment=driver.findElement(By.id("txt_comment"));
 	rs.setValue(comment, "ThisIsNotAPassword");
-	TimeUnit.SECONDS.sleep(2);
-	String timestamp=LocalDateTime.now().toString().replace(':', '-');
-	String path="./ScreenShot"+timestamp+".png";
-	TakesScreenshot ts=(TakesScreenshot)driver;
-	File source=comment.getScreenshotAs(OutputType.FILE);
-	File dest=new File(path);
-	FileUtils.copyFile(source, dest);
 	WebElement book=driver.findElement(By.xpath("//button[text()='Book Appointment']"));
 	rs.click(book);
-	
+	TimeUnit.SECONDS.sleep(5);
 	driver.quit();
-
 		}
-		catch(Exception e)
+		catch(InterruptedException e)
 		{
 			e.printStackTrace();
 		}
 	
 	}
 }
-
