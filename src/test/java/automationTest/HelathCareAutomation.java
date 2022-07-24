@@ -61,16 +61,17 @@ public class HelathCareAutomation {
 	}
 	WebElement comment=driver.findElement(By.id("txt_comment"));
 	rs.setValue(comment, "ThisIsNotAPassword");
-	TimeUnit.SECONDS.sleep(2);
-	String timestamp=LocalDateTime.now().toString().replace(':', '-');
-	String path="./ScreenShot"+timestamp+".png";
-	TakesScreenshot ts=(TakesScreenshot)driver;
-	File source=comment.getScreenshotAs(OutputType.FILE);
-	File dest=new File(path);
-	FileUtils.copyFile(source, dest);
 	WebElement book=driver.findElement(By.xpath("//button[text()='Book Appointment']"));
 	rs.click(book);
+	TimeUnit.SECONDS.sleep(2);
 	
+	  String timestamp=LocalDateTime.now().toString().replace(':', '-'); String
+	  path="./ScreenShot"+timestamp+".png"; TakesScreenshot
+	  ts=(TakesScreenshot)driver; 
+	  File source=ts.getScreenshotAs(OutputType.FILE); 
+	  File dest=new File(path);
+	  FileUtils.copyFile(source, dest);
+	 
 	driver.quit();
 
 		}

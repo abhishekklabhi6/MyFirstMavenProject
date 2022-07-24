@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="RegressionSuite" parallel="tests">
+<suite name="RegressionSuite" parallel="classes" thread-count="3">
   <test  name="ChromeTest">
     <classes>
       <class name="automationTest.HelathCareAutomation"/>
-    </classes>
-  </test> 
-  <test  name="EdgeTest">
-    <classes>
-      <class name="automationTest.HelathCareAutomationInEdge"/>
-    </classes>
-  </test> 
-  
+       <class name="automationTest.HelathCareAutomationInEdge"/>
+    </classes> 
+     </test> 
 </suite> 

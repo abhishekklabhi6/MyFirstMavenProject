@@ -4,25 +4,25 @@ public class RemoveDuplicateArray {
 
 	public static void main(String[] args) {
 
-		int a[]= {3,6,7,6,9};
-		int b[]=a;
-		for(int j=0;j<a.length;j++)
+		int a[]= {6,8,8,9,6};
+		for(int k=0;k<a.length;k++)
 		{
 			int count=0;
-		for(int i=1;i<a.length-1;i++)
-		{
-			if(a[j]==b[i+1])
+			for(int i=0;i<a.length-k-1;i++)
 			{
-				count++;
+				if(a[k]==a[k+i+1])
+				{
+		            count++;
+				}
 			}
-			if(count>0)
+			if(count==0)
 			{
-				System.out.println(a[j]);
-				break;
+			System.out.println(a[k]);
 			}
+			
 		}
 		
-		}
+
 	}
 
 }

@@ -3,8 +3,8 @@ package javaPrograms;
 public class Driver {
 
 	public static void main(String[] args) {
-		AbstarctClass abstarctClass=new ImplentingClass();
-		abstarctClass.abstractMethod();
+		Cricket cricket=new Cricket("ramya",877);
+		cricket.print();
 		
 		}	
 	}
