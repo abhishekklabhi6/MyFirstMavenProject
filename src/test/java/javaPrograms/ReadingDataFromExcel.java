@@ -13,7 +13,7 @@ public class ReadingDataFromExcel {
 	
 try
 {
-			String path="C:\\Users\\User\\eclipse-workspace\\MyMavenProject\\src\\test\\resources\\TestData\\Book.xlsx";
+			String path="C:\\Users\\User\\eclipse-workspace\\MyMavenProject\\src\\test\\resources\\TestData\\Book11.xlsx";
 			FileInputStream fin=new FileInputStream(path);
 			Workbook wb=WorkbookFactory.create(fin);
 			Sheet sheet=wb.getSheet("Sheet1");
@@ -30,10 +30,6 @@ try
 catch(Exception e)
 {
 	  e.printStackTrace();
-}
-finally
-{
-	System.out.println("this final block");
 }
 	}
 }

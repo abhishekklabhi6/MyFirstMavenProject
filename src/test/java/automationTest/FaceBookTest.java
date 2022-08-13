@@ -41,6 +41,7 @@ public class FaceBookTest {
 			String actualTitle=driver.getCurrentUrl();
 			String expectedurl="https://www.facebook.com/";
 			Assert.assertEquals(expectedurl, actualTitle,"Assertion fails");
+			TimeUnit.SECONDS.sleep(5);
 		}
 		catch(Exception e)
 		{
