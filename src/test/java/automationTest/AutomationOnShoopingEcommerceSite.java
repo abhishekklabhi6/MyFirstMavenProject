@@ -8,6 +8,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -27,8 +28,8 @@ public class AutomationOnShoopingEcommerceSite {
 	@BeforeSuite
 	public void beforeSuite()
 	{
-		WebDriverManager.chromedriver().setup();
-		driver=new ChromeDriver();
+		WebDriverManager.edgedriver().setup();
+		driver=new EdgeDriver();
 		signInpageForShop=PageFactory.initElements(driver, SignInpageForShop.class);
 		regestrationPage=PageFactory.initElements(driver, RegestrationPage.class);
 		personalInformationPage=PageFactory.initElements(driver, PersonalInformationPage.class);

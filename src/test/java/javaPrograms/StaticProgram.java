@@ -4,12 +4,14 @@ public class StaticProgram {
 
 	static int a=10;
 	int b=20;
-	
+
 	public void print()
 	{
-   int sum=a+b;
-System.out.println(sum);
+		int sum=a+b;
+		System.out.println(sum);
+
 	}
+
 }
 
 

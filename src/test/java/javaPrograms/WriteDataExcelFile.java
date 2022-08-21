@@ -12,7 +12,7 @@ public class WriteDataExcelFile {
 
 	public static void main(String[] args) throws Exception {
 
-		String Path="C:\\Users\\User\\eclipse-workspace\\MyMavenProject\\src\\test\\resources\\TestData\\Book3.xlsx";
+		String Path="C:\\Users\\User\\eclipse-workspace\\MyMavenProject\\src\\test\\resources\\TestData\\Book1.xlsx";
 		String counmName[]= {"username","Password","result"};
 		Workbook wb=new XSSFWorkbook();
 		for(int k=0;k<3;k++)

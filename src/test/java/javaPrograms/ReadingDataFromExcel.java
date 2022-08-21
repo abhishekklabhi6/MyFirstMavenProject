@@ -10,9 +10,9 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ReadingDataFromExcel {
 
 	public static void main(String[] args) {
-	
-try
-{
+
+		try
+		{
 			String path="C:\\Users\\User\\eclipse-workspace\\MyMavenProject\\src\\test\\resources\\TestData\\Book11.xlsx";
 			FileInputStream fin=new FileInputStream(path);
 			Workbook wb=WorkbookFactory.create(fin);
@@ -26,10 +26,10 @@ try
 					System.out.println(sheet.getRow(i).getCell(j).getStringCellValue().toString());
 				}
 			}
-	}
-catch(Exception e)
-{
-	  e.printStackTrace();
-}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 }
