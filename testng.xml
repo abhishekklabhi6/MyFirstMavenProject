@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="RegressionSuite" parallel="tests" thread-count="2">
+<suite name="RegressionSuite">
+ <parameter name="browserName" value="edge"></parameter>
   <test  name="ChromeTest">
-  <parameter name="browserName" value="chrome"></parameter>
-    <classes>
-      <class name="automationTest.FBTestForChrome"/>
-    </classes> 
-     </test> 
-     <test name="Edge test">
-     <parameter name="browserName" value="edge"></parameter>
-     <classes>
-     <class name="automationTest.FbTestForEdge"/>
-     </classes>
+ <classes>
+ <class name="automationTest.FBTestForChrome"/>
+ </classes>
      </test>
 </suite> 

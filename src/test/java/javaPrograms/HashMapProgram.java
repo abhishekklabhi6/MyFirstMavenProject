@@ -2,13 +2,16 @@ package javaPrograms;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class HashMapProgram {
 
 	public static void main(String[] args) {
-	System.out.println(getusername("admin"));	
-	System.out.println(getpassword("manager"));	
-	System.out.println(getCredentails());
+	Scanner s=new Scanner(System.in);
+	System.out.println("enter role");
+	String role=s.next();
+	String res=getpassword(role);
+	System.out.println(res);
 	}
 	
 	public static Map<String, Object> getCredentails()
@@ -17,7 +20,7 @@ public class HashMapProgram {
 		map.put("manager","abcd,6676777");
 		map.put("admin","yuyyu,778556");
 		map.put("user","cvcbvbv,9787");
-		map.put("companypresent",true);
+		map.put("companypresent",false);
 		map.put("countrycode",91);
 		return map;
 		

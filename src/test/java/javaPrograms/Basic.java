@@ -21,7 +21,7 @@ public class Basic {
 		{
 			for(int j=0;j<3;j++)
 			{
-		email[i][j]= "dfffgfgg@gmail.com";
+		email[i][j]= "abhi"+j;
 			}
 		}
 		

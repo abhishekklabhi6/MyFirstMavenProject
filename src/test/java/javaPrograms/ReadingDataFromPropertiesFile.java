@@ -13,8 +13,9 @@ public class ReadingDataFromPropertiesFile {
 
 		try
 		{
-			String path="/MyMavenProject/src/test/resources/TestData/data.properties.txt";
-			FileInputStream fin=new FileInputStream(path);
+			String Path=System.getProperty("user.dir")+"\\src\\test\\resources\\TestData\\datanew.properties.txt";
+			System.out.println(Path);
+			FileInputStream fin=new FileInputStream(Path);
 			Properties pro=new Properties();
 			pro.load(fin);
 			Set<Object> key=pro.keySet();
@@ -27,7 +28,5 @@ public class ReadingDataFromPropertiesFile {
 		{
 			e.printStackTrace();
 		}
-
 	}
-
 }

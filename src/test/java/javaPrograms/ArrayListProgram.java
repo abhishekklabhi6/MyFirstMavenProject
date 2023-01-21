@@ -8,11 +8,10 @@ public class ArrayListProgram {
 
 	public static void main(String[] args) {
 		
-		List list=new ArrayList();
+		List<Object> list=new ArrayList<Object>();
 		
 		list.add("abhi");
 		list.add("subrmaya");
-		list.add(763363);
 		list.add(455.787);
 		list.add(false);
 		list.add('r');

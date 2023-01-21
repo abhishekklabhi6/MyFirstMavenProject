@@ -15,7 +15,6 @@ public class Encauplsation {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	
+	}	
 
 }

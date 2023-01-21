@@ -66,8 +66,8 @@ public class HelathCareAutomation {
 	TimeUnit.SECONDS.sleep(2);
 	
 	  String timestamp=LocalDateTime.now().toString().replace(':', '-'); String
-	  path="./ScreenShot"+timestamp+".png"; TakesScreenshot
-	  ts=(TakesScreenshot)driver; 
+	  path="./ScreenShot"+timestamp+".png"; 
+	  TakesScreenshot ts=(TakesScreenshot)driver; 
 	  File source=ts.getScreenshotAs(OutputType.FILE); 
 	  File dest=new File(path);
 	  FileUtils.copyFile(source, dest);

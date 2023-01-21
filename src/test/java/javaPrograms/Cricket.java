@@ -19,10 +19,9 @@ public class Cricket {
 		this.bal=bal;
 	}
 	
-	public void print()
+	public String  toString()
 	{
-		System.out.println(name);
-		System.out.println(bal);
+		return name;
 	}
 	
 }

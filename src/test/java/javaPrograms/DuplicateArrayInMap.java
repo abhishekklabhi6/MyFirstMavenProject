@@ -7,12 +7,11 @@ import java.util.Scanner;
 public class DuplicateArrayInMap {
 
 	public static void main(String[] args) {
-
 		Scanner s=new Scanner (System.in);
 		System.out.println(" enter the size of the array");
 		int n=s.nextInt();
 		int a[]=new int[n];
-		System.out.println(" enter array number");
+		System.out.println("enter array number");
 		for(int i=0;i<a.length;i++)
 		{
 			a[i]=s.nextInt();
@@ -34,6 +33,4 @@ public class DuplicateArrayInMap {
 			}
 		}
 	}
-	
-
 }

@@ -6,7 +6,7 @@ public class ConditionalOperatorProgram {
 		while(true)
 		{
 			System.out.println("idiot");
-			continue;
+			break;
 		}
 	}
 
